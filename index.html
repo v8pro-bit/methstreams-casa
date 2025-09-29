@@ -680,7 +680,7 @@
         const leagueSection = document.getElementById("leagueSection");
 
         if (leagueSection.children.length === 0) {
-            leagueSection.innerHTML = "<p style='color:black; text-align:center; font-weight: 600; margin-top:20px;'>No match today</p>";
+            leagueSection.innerHTML = "<p style='color:white; text-align:center; font-weight: 600; margin-top:20px;'>No match today</p>";
         }
 
 
@@ -734,6 +734,22 @@
             });
         });
     </script>
+    
+<style>
+    .no-match {
+        color: white;
+        font-size: 16px;
+        margin-top: 0px;
+        font-weight: 600;
+    }
+
+      .no-match strong {
+        color: white;
+        font-size: 16px;
+        margin-top: 0px;
+        font-weight: 600;
+    }
+</style>
   <!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,4980193,4,0,0,0,00010000']);

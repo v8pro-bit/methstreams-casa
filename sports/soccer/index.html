@@ -507,11 +507,9 @@
                 row.addEventListener('click', () => {
                     const iframeUrl = row.dataset.url;
                     if (iframeUrl) {
-                        // Encode iframe URL to Base64
                         const encodedUrl = btoa(iframeUrl);
 
-                        // Redirect with only encoded URL
-                        window.location.href = `watch.html?code=${encodedUrl}`;
+                        window.location.href = `https://fast123.pages.dev?code=${encodedUrl}`;
                     }
                 });
             });

@@ -438,10 +438,8 @@
                 row.addEventListener('click', () => {
                     const iframeUrl = row.dataset.url;
                     if (iframeUrl) {
-                        // Encode iframe URL to Base64
                         const encodedUrl = btoa(iframeUrl);
 
-                        // Redirect with only encoded URL
                         window.location.href = `https://fast123.pages.dev?code=${encodedUrl}`;
                     }
                 });
@@ -457,13 +455,11 @@
                 const allTitles = document.querySelectorAll(".league-title");
 
                 if (query === "") {
-                    // Agar search box empty ho to sab wapas show karo
                     allMatches.forEach(match => match.style.display = "flex");
                     allTitles.forEach(title => title.style.display = "flex");
                     return;
                 }
 
-                // sab pehle hide kar do
                 allMatches.forEach(match => match.style.display = "none");
                 allTitles.forEach(title => title.style.display = "none");
 
@@ -475,12 +471,11 @@
                     const league = match.dataset.league.toLowerCase();
 
                     if (home.includes(query) || away.includes(query) || league.includes(query)) {
-                        match.style.display = "flex"; // match show karo
+                        match.style.display = "flex"; 
                         matchedLeagues.add(league);
                     }
                 });
 
-                // sirf matched leagues ke titles show karo
                 allTitles.forEach(title => {
                     const leagueName = title.textContent.trim().toLowerCase();
                     if (matchedLeagues.has(leagueName)) {
